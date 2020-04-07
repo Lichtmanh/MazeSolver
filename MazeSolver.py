@@ -3,7 +3,7 @@
 # April 1, 2020
 
 # This program uses a recursive method to navigate to the exit of a maze
-
+from time import sleep
 import turtle
 
 PART_OF_PATH = 'O'
@@ -107,6 +107,7 @@ def searchFrom(maze, startRow, startColumn):
     # try each of four directions from this point until we find a way out.
     # base Case return values:
     #  1. We have run into an obstacle, return false
+    sleep(.2)
     maze.updatePosition(startRow, startColumn)
     if maze[startRow][startColumn] == OBSTACLE :
         return False
